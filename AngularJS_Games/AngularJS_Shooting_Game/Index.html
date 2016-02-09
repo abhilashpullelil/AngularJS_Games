@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sample game by Abhilash</title>
+    <script src="References/Angular/angular.js"></script>
+    <script src="App/app.js"></script>
+</head>
+<body ng-app="archeryGameApp" ng-controller="gameController">
+    
+    <h1>Score : {{score}}   <span style="float:right; color:red"> Time remaining {{countDown}} </span></h1>
+
+    <canvas id="myCanvas" style="width: 800px; height: 500px; background-image: url(Assets/Images/4.jpg)" ng-show="!isGameOver" ng-mousemove="gunTransalte($event)" ng-click="shoot($event)"></canvas>
+
+    <h1 ng-show="isGameOver">Game Over !!! Your score is {{score}}</h1>
+
+    <div style="display:none">
+        <img id="background" src="Assets/Images/1.jpg" />
+        <img id="bird" src="Assets/Images/2.gif" />
+    </div>
+    <h4>Created with love by Abhilash P.A (abhilashpullelil@yahoo.com)</h4>
+</body>
+</html>
